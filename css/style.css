@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Hanken+Grotesk:wght@200;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  height: 1990px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Carter One", cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  background: url(../img/hero-banner.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.banner header {
+  padding: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header {
+    background: #fff;
+    color: #000;
+  }
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header .logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.banner header .logo h1 {
+  font-size: 38px;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header .info {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+.banner header nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 100px;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header nav {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+  }
+}
+.banner header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header nav ul {
+    display: none;
+  }
+}
+.banner header nav ul li {
+  padding: 20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.banner header nav ul li a {
+  color: #fff;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner header nav ul li a {
+    color: #000;
+  }
+}
+.banner header .mobile-nav {
+  display: none;
+  font-size: 22px;
+}
+@media (min-width: 0) and (max-width: 992px) {
+  .banner header .mobile-nav {
+    display: block;
+  }
+}
+.banner .hero-text {
+  color: #fff;
+  font-size: 33px;
+  padding: 8%;
+  text-transform: uppercase;
+}
+.banner .hero-text h1 {
+  font-size: 86px;
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .banner .hero-text h1 {
+    font-size: 33px;
+  }
+}
+
+.sticky {
+  position: fixed;
+  background: blue;
+  width: 100%;
+  -webkit-animation: fadeIn 0.7s;
+          animation: fadeIn 0.7s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}/*# sourceMappingURL=style.css.map */

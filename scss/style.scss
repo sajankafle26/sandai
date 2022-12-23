@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Hanken+Grotesk:wght@200;300;400;500;600;700&family=Nunito:wght@200;300;400;500;600;700&display=swap');
+$brand: #FE9037;
+ $w:#fff;
+
+ *
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body 
+ {
+    font-family: 'Nunito', sans-serif;
+    height: 1990px;
+ }
+ h1,h2,h3,h4,h5,h6 
+ {
+    font-family: 'Carter One', cursive;
+ }
+ ul 
+ {
+    list-style: none;
+ }
+ a 
+ {
+    text-decoration: none;
+ }
+ @mixin flex ($jc: space-between, $ai: center)
+ {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+ }
+ @mixin res($min:0px, $max:992px) 
+ {
+    @media (min-width: $min)  and (max-width: $max){
+        @content;
+    }
+ }
+ .banner 
+ {
+    background: url(../img/hero-banner.jpg);
+    background-size: cover;
+    height: 100vh;
+ 
+    header
+    {
+        padding: 20px;
+        color: $w;
+        @include flex;
+        @include res(0px, 992px) 
+        {
+            background: $w;
+            color: #000;
+        }
+        .logo 
+        {
+            @include res(0px, 992px) 
+            {
+                order: 2;
+              
+            }
+            h1 
+            {
+               font-size: 38px;
+            }
+        }
+        .info 
+        {
+            @include res(0px, 992px) 
+            {
+                order: 3;
+            }
+        }
+        nav
+        {
+            flex-grow: 1;
+            padding-left: 100px;
+            @include res(0px, 992px) 
+            {
+                order: 1;
+                flex-grow: 0;
+                background: $w;
+                position: absolute;
+                top: 80px;
+                left: 0px;
+            }
+            ul 
+            {
+                @include flex(start,center);
+                @include res(0px, 992px) 
+            {
+                display: none;
+            }
+                li 
+                {
+                    padding: 20px;
+                    font-size: 17px;
+                    font-weight: 700;
+                    a 
+                    {
+                        color: $w;
+                        @include res(0px, 992px) 
+                        {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-nav
+        {
+            display: none;
+            font-size: 22px;
+            @include res(0, 992px)
+            {
+                display: block;
+            }
+        }
+    }
+    .hero-text 
+    {
+        color: $w;
+        font-size: 33px;
+        padding: 8%;
+        text-transform: uppercase;
+        h1 
+        {
+            font-size: 86px;
+            @include res 
+                        {
+                font-size: 33px;
+            }
+           
+        }
+    }
+ }
+
+ .sticky
+ {
+    position: fixed;
+    background: blue;
+    width: 100%;
+    animation: fadeIn 0.7s;
+ }
+ @keyframes fadeIn {
+    0%{ transform: translateY(-100%);}
+    100%{ transform: translateY(0%);}
+ }
